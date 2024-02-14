@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    font-size: 30rem;
+    border-bottom: 1px #ccc solid;
+    margin: 0 20rem;
+    align-items: center;
+}
+
+.imgContainer {
+    margin-right: 20rem;
+}
+
+.rightContainer {
+    width: 470rem;
+    margin: 20rem;
+}
+
+.mealImg {
+    width: 280rem;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30rem;
+    margin-top: 20rem;
+}
+
+.pContent {
+    font-size: 26rem;
+    color: #aaa;
+}
+
+.price {
+    font-size: 28rem;
+    font-weight: bolder;
+}
+
+.price:before {
+    content: "￥";
+    font-size: 20rem;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}

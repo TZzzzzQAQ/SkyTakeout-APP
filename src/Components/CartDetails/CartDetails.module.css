@@ -1,0 +1,36 @@
+.cartDetailsDiv {
+    width: 750rem;
+    max-height: 1400rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 40rem;
+    border-top-right-radius: 40rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.headerBox {
+    margin: 0 20rem;
+    font-size: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7d7d7d;
+    margin: 0;
+    font-size: 30rem;
+}
+
+.clearCart p {
+    margin-left: 10rem;
+    font-size: 26rem;
+}
+
+.cartMeals {
+    overflow: auto;
+}

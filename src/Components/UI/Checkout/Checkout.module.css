@@ -1,0 +1,72 @@
+.checkoutBox {
+    padding: 20rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 750rem;
+    z-index: 9999;
+    font-size: 40rem;
+    background-color: #eeedef;
+}
+
+.titleBox {
+    height: 50rem;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 700rem;
+    margin: 0 auto;
+}
+
+.cardTitleBox {
+    background-color: #fff;
+    width: 700rem;
+    border-radius: 30rem;
+}
+
+.checkoutBox h2 {
+    font-size: 36rem;
+    margin: 30rem;
+    padding: 30rem 0;
+    border-bottom: 1px #a7a7a7 dashed;
+}
+
+.list {
+    max-height: 1200rem;
+    overflow: auto;
+}
+
+.price {
+    position: relative;
+    font-size: 36rem;
+    font-weight: bolder;
+    display: flex;
+    padding-bottom: 30rem;
+    margin: 20rem;
+    justify-content: flex-end;
+}
+
+.price::before,
+.price::after {
+    position: absolute;
+    background-color: #EEEDEF;
+    width: 40rem;
+    height: 40rem;
+    content: ' ';
+    top: -40rem;
+    right: -40rem;
+    border-radius: 50%;
+}
+
+.price::before{
+    left: -40rem;
+}
+.price div::before {
+    content: '合计：￥';
+    font-weight: normal;
+    font-size: 28rem;
+}

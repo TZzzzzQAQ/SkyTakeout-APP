@@ -1,0 +1,96 @@
+.cartDiv {
+    position: fixed;
+    z-index: 999;
+    bottom: 30rem;
+    left: 0;
+    right: 0;
+    width: 700rem;
+    height: 80rem;
+    background-color: #333;
+    border-radius: 40rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartBox {
+    display: flex;
+}
+
+.img {
+    height: 100rem;
+    position: relative;
+    bottom: 12rem;
+    left: -1rem;
+}
+
+.amount {
+    position: relative;
+    top: -40rem;
+    left: -15rem;
+    background-color: red;
+    font-size: 24rem;
+    color: white;
+    height: 36rem;
+    width: 36rem;
+    line-height: 36rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.btn {
+    width: 200rem;
+    height: 80rem;
+    border-radius: 40rem;
+    border: none;
+    background-color: #f9c04c;
+    font-size: 32rem;
+    line-height: 80rem;
+    text-align: center;
+}
+
+.leftDiv {
+    display: flex;
+    width: 600rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    width: 100rem;
+    height: 80rem;
+    color: white;
+    font-size: 34rem;
+    text-align: center;
+    line-height: 80rem;
+    font-weight: bolder;
+    align-items: center;
+}
+
+.noPrice {
+    width: 200rem;
+    height: 80rem;
+    font-size: 38rem;
+    text-align: center;
+    line-height: 80rem;
+    font-weight: bolder;
+    color: #64656f;
+}
+
+.price::before {
+    content: '￥';
+    font-size: 24rem;
+    font-weight: normal;
+}
+
+.noBtn {
+    width: 200rem;
+    height: 80rem;
+    border-radius: 40rem;
+    border: none;
+    background-color: #6c6b6c;
+    font-size: 32rem;
+    line-height: 80rem;
+    text-align: center;
+    color: #b6b6bf;
+}

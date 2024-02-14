@@ -1,0 +1,41 @@
+.confirmBox {
+    width: 600rem;
+    height: 300rem;
+    background-color: #ffffff;
+    border-radius: 30rem;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.confirmBox p {
+    font-size: 40rem;
+    text-align: center;
+    margin: 0;;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80rem;
+}
+
+.cancelBtn,
+.confirmBtn {
+    width: 200rem;
+    height: 60rem;
+    border-radius: 20rem;
+    border: none;
+    font-size: 30rem;
+}
+
+.confirmBtn {
+    background-color: #febf4a;
+    color: black;
+}

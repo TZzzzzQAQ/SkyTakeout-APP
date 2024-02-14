@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 40rem;
+}
+
+.sub,
+.add {
+    background-color: #ecad06;
+    border-radius: 50%;
+    width: 40rem;
+    height: 40rem;
+    border: none;
+    font-size: 16rem;
+    margin: 0 10rem;
+}
+
+.sub {
+    background-color: transparent;
+    border: 1px #000000 solid;
+}
+
+.pContent {
+    font-size: 24rem;
+    line-height: 40rem;
+    margin: 0;
+}
+
+
