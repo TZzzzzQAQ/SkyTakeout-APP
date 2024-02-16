@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import classes from './Cart.module.css';
 import iconImg from '../../asset/bag.png'
 import cartContext from "../../store/cartContext";
@@ -11,6 +11,7 @@ const Cart = () => {
 
     const [detailsFlag, setDetailsFlag] = useState(false);
     const [checkoutFlag, setCheckoutFlag] = useState(false);
+
     const toggleDetails = () => {
         if (context.totalAmount === 0) {
             return;
@@ -20,6 +21,7 @@ const Cart = () => {
     const toggle = () => {
         setDetailsFlag(false);
     }
+
     const toggleCheckout = (e) => {
         e.stopPropagation();
         if (context.totalAmount === 0) {
@@ -27,13 +29,25 @@ const Cart = () => {
         }
         setCheckoutFlag(prevState => !prevState)
     }
+
+    useEffect(() => {
+        if (context.totalAmount === 0) {
+            setDetailsFlag(false);
+            setCheckoutFlag(false);
+        }
+    }, [context, setCheckoutFlag, setDetailsFlag]);
+
     return (
         <>
             {(detailsFlag) && <CartDetails toggle={toggle}/>}
             {(checkoutFlag) && <Checkout setCheckoutFlag={setCheckoutFlag}/>}
-            <div className={classes.cartDiv} onClick={toggleDetails}>
+            <div
+                className={classes.cartDiv}
+                 onClick={toggleDetails}>
                 <div className={classes.cartBox}>
-                    <img src={iconImg} alt='' className={classes.img}/>
+                    <img
+                        src={iconImg}
+                        alt='' className={classes.img}/>
                     {flag && <p className={classes.amount}>{context.totalAmount}</p>}
                 </div>
                 <div className={classes.leftDiv}>

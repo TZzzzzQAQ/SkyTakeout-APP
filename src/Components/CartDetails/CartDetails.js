@@ -15,7 +15,7 @@ const CartDetails = ({toggle}) => {
     }
     const confirmConfirm = () => {
         setConfirmFlag(false);
-        context.clearCart();
+        context.cartDispatch({type: 'clear'})
     }
     const confirmHandler = () => {
         setConfirmFlag(true);

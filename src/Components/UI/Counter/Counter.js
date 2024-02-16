@@ -5,23 +5,33 @@ import {faPlus, faMinus} from "@fortawesome/free-solid-svg-icons";
 import CartContext from "../../../store/cartContext";
 
 const Counter = ({data}) => {
-        const {addItem, subItem} = useContext(CartContext);
+        const {cartDispatch} = useContext(CartContext);
         const subHandler = () => {
-            subItem(data)
+            cartDispatch({type: 'sub', meal: data});
         }
         const addHandler = () => {
-            addItem(data)
+            cartDispatch({type:'add',meal:data})
         }
         return (
             <div className={classes.container}>
                 {
                     (data.amount === undefined || data.amount === 0) ? '' :
                         < >
-                            <button className={classes.sub} onClick={subHandler}><FontAwesomeIcon icon={faMinus}/></button>
-                            <span className={classes.pContent}>{data.amount}</span>
+                            <button
+                                className={classes.sub}
+                                onClick={subHandler}>
+                                <FontAwesomeIcon
+                                    icon={faMinus}/></button>
+                            <span
+                                className={classes.pContent}>{data.amount}</span>
                         </>
                 }
-                <button className={classes.add} onClick={addHandler}><FontAwesomeIcon icon={faPlus}/></button>
+                <button
+                    className={classes.add}
+                    onClick={addHandler}>
+                    <FontAwesomeIcon
+                        icon={faPlus}/>
+                </button>
             </div>
         )
             ;
